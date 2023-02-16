@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-anketa </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+    <div class="heading" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                        
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+
+    <div class="klasaanketa">
+        <h1>За подобрување на квалитетот на страницата, Ве молиме да ја пополните следната анкета.</h1>
+        <p><h6>со пополнување на оваа анкета, Вашите податоци нема да бидат видливи за останатите корисници</h6></p>
+        <br>
+        <br>
+        <form id="form">
+ 
+            <!-- Details -->
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Име :
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="name"
+                       placeholder="име" />
+            </div>
+      
+            <div class="form-control">
+                <label for="surname" id="label-name">
+                    Презиме :
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="surname"
+                       placeholder="презиме" />
+            </div>
+
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Е-пошта :
+                </label>
+     
+                <!-- Input Type Email-->
+                <input type="email"
+                       id="email"
+                       placeholder="е-пошта" />
+            </div>
+      
+            <div class="form-control">
+                <label for="age" id="label-age">
+                    Возраст :
+                </label>
+     
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="age"
+                       placeholder="возраст" />
+            </div>
+      
+            <div class="form-control">
+                <label for="role" id="label-role">
+                    Која е Вашата професија?
+                </label>
+                 
+                <!-- Dropdown options -->
+                <select name="role" id="role">
+                    <option value="student">Студент</option>
+                    <option value="intern">Вработен</option>
+                    <option value="intern">Невработен</option>
+                    <option value="intern">Пензионер</option>
+                    <option value="other">Друго</option>
+                </select>
+            </div>
+      
+            <div class="form-control">
+                <label>
+                    Дали би ја препорачале страницата на Ваши познаници?
+                </label>
+     
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">Да</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">Не</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">Можеби</input>
+                </label>
+            </div>
+      
+            <div class="form-control">
+                <label>Кој дел најмногу ви се допадна?
+                    <small>(Можете да одберете повеќе)</small>
+                </label>
+
+
+                
+                <!-- Input Type Checkbox -->
+                <label for="inp-1">
+                    <input type="checkbox"
+                           name="inp">Мода</input></label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                           name="inp">Рецепти</input></label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                           name="inp">Никола Тесла</input></label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                           name="inp">Театар</input></label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                           name="inp">Пријатели</input></label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                           name="inp">Манекенство</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">Графички Дизајн</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                           name="inp">Миленичиња</input></label>
+            </div>
+      
+            <div class="form-control">
+                <label for="comment">
+                    Доколку имате некакви предлози за подобрување на нашата страница, Ве молиме да ни пишете коментар.
+                </label>
+     
+                <!-- multi-line text input control -->
+                <textarea name="comment" id="comment"
+                    placeholder="Внесете коментар">
+                </textarea>
+            </div>
+      
+            <!-- Multi-line Text Input Control -->
+            <button class="edna" type="submit" value="submit">
+                Потврди
+            </button>
+        </form>
+
+
+    </div>    
+
+    <!-- proverka dali e robot -->
+    <script  type = "text/javascript">
+    var sum;
+    var sum1;
+    number1 = 5;
+    number2 = 10;
+    sum1 = number1 + number2; 
+    sum = window.prompt( "Проверка за луѓе. Колку е збирот 5+10 ?" );
+    while(sum != sum1){
+        window.alert("Обидете се повторно! Стисни OK за нов обид");
+        sum = window.prompt( "Проверка за луѓе. Колку е збирот 5+10 ?" );
+    }
+    </script>
+
+
+
+    
+</body>
+
+
+</html>

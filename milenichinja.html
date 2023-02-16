@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-milenichkinja </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <div class="heading" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                        
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+    
+    <!-- sliki -->
+     <!--  sledniot del e za boxes za sekciite  -->
+     <section class="containermil" >
+        <div class="cardmil">
+            <div class="cardmil-imagemil c1"></div>
+            <div class="voting"> 
+                <button id="likebtn">
+                    <i class="fa fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input2" value="0" name="" class="qwerty">
+
+                <button id="dislikebtn">
+                    <i class="fa fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input1" value="0" name="" class="qwerty">
+            </div>
+        </div>  
+            <div class="cardmil">
+                <div class="cardmil-imagemil c2"></div>
+                <div class="voting"> 
+                    <button id="likebtn1">
+                        <i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <input type="number" id="input21" value="0" name="" class="qwerty">
+    
+                    <button id="dislikebtn1">
+                        <i class="fa fa-thumbs-down"></i>
+                    </button>
+                    <input type="number" id="input11" value="0" name="" class="qwerty">
+                </div>
+            </div>          
+                <div class="cardmil">
+                    <div class="cardmil-imagemil c3"></div>
+                    <div class="voting"> 
+                        <button id="likebtn2">
+                            <i class="fa fa-thumbs-up"></i>
+                        </button>
+                        <input type="number" id="input22" value="0" name="" class="qwerty">
+        
+                        <button id="dislikebtn2">
+                            <i class="fa fa-thumbs-down"></i>
+                        </button>
+                        <input type="number" id="input12" value="0" name="" class="qwerty">
+                    </div>
+                </div>            
+    </section>
+      <!--  sledniot del e za boxes za sekciite  -->
+      <section class="containergal" >
+        <div class="cardmil">
+            <div class="cardmil-imagemil c4"></div>
+            <div class="voting"> 
+                <button id="likebtn3">
+                    <i class="fa fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input23" value="0" name="" class="qwerty">
+
+                <button id="dislikebtn3">
+                    <i class="fa fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input13" value="0" name="" class="qwerty">
+            </div>
+        </div>
+            <div class="cardmil">
+                <div class="cardmil-imagemil c5"></div>
+                <div class="voting"> 
+                    <button id="likebtn4">
+                        <i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <input type="number" id="input24" value="0" name="" class="qwerty">
+    
+                    <button id="dislikebtn4">
+                        <i class="fa fa-thumbs-down"></i>
+                    </button>
+                    <input type="number" id="input14" value="0" name="" class="qwerty">
+                </div>
+            </div>     
+                <div class="cardmil">
+                    <div class="cardmil-imagemil c6"></div>
+                    <div class="voting"> 
+                        <button id="likebtn5">
+                            <i class="fa fa-thumbs-up"></i>
+                        </button>
+                        <input type="number" id="input25" value="0" name="" class="qwerty">
+        
+                        <button id="dislikebtn5">
+                            <i class="fa fa-thumbs-down"></i>
+                        </button>
+                        <input type="number" id="input15" value="0" name="" class="qwerty">
+                    </div>
+                </div>              
+    </section>
+      <!--  sledniot del e za boxes za sekciite  -->
+      <section class="containermil" >
+        <div class="cardmil">
+            <div class="cardmil-imagemil c7"></div>
+            <div class="voting"> 
+                <button id="likebtn6">
+                    <i class="fa fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input26" value="0" name="" class="qwerty">
+
+                <button id="dislikebtn6">
+                    <i class="fa fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input16" value="0" name="" class="qwerty">
+            </div>
+        </div>      
+            <div class="cardmil">
+                <div class="cardmil-imagemil c8"></div>
+                <div class="voting"> 
+                    <button id="likebtn7">
+                        <i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <input type="number" id="input27" value="0" name="" class="qwerty">
+    
+                    <button id="dislikebtn7">
+                        <i class="fa fa-thumbs-down"></i>
+                    </button>
+                    <input type="number" id="input17" value="0" name="" class="qwerty">
+                </div>
+            </div>          
+                <div class="cardmil">
+                    <div class="cardmil-imagemil c9"></div> 
+                    <div class="voting"> 
+                        <button id="likebtn8">
+                            <i class="fa fa-thumbs-up"></i>
+                        </button>
+                        <input type="number" id="input28" value="0" name="" class="qwerty">
+        
+                        <button id="dislikebtn8">
+                            <i class="fa fa-thumbs-down"></i>
+                        </button>
+                        <input type="number" id="input18" value="0" name="" class="qwerty">
+                    </div>      
+                </div>              
+    </section>
+      <!--  sledniot del e za boxes za sekciite  -->
+      <section class="containermil" >
+        <div class="cardmil">
+            <div class="cardmil-imagemil c10"></div>
+            <div class="voting"> 
+                <button id="likebtn9">
+                    <i class="fa fa-thumbs-up"></i>
+                </button>
+                <input type="number" id="input29" value="0" name="" class="qwerty">
+
+                <button id="dislikebtn9">
+                    <i class="fa fa-thumbs-down"></i>
+                </button>
+                <input type="number" id="input19" value="0" name="" class="qwerty">
+            </div>
+        </div>      
+            <div class="cardmil">
+                <div class="cardmil-imagemil c11"></div>
+                <div class="voting"> 
+                    <button id="likebtn10">
+                        <i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <input type="number" id="input210" value="0" name="" class="qwerty">
+    
+                    <button id="dislikebtn10">
+                        <i class="fa fa-thumbs-down"></i>
+                    </button>
+                    <input type="number" id="input110" value="0" name="" class="qwerty">
+                </div>
+            </div>          
+                <div class="cardmil">
+                    <div class="cardmil-imagemil c12"></div>  
+                    <div class="voting"> 
+                        <button id="likebtn11">
+                            <i class="fa fa-thumbs-up"></i>
+                        </button>
+                        <input type="number" id="input211" value="0" name="" class="qwerty">
+        
+                        <button id="dislikebtn11">
+                            <i class="fa fa-thumbs-down"></i>
+                        </button>
+                        <input type="number" id="input111" value="0" name="" class="qwerty">
+                    </div>    
+                </div>              
+    </section>
+
+
+<script type="text/javascript">
+    
+    let likebtn = document.querySelector('#likebtn');
+    let dislikebtn = document.querySelector('#dislikebtn');
+    let input1 = document.querySelector('#input1');
+    let input2 = document.querySelector('#input2');
+
+    likebtn.addEventListener('click' , ()=>{
+        input2.value = parseInt(input2.value) + 1;
+        input2.style.color = "#12ff00";
+    })
+
+    dislikebtn.addEventListener('click' , ()=>{
+        input1.value = parseInt(input1.value) + 1;
+        input1.style.color = "#ff0000";
+    })
+
+
+</script>
+
+<script type="text/javascript" >
+    likebtn1 = document.querySelector('#likebtn1');
+    dislikebtn1 = document.querySelector('#dislikebtn1');
+     input11 = document.querySelector('#input11');
+     input21 = document.querySelector('#input21');
+
+    likebtn1.addEventListener('click' , ()=>{
+        input21.value = parseInt(input21.value) + 1;
+        input21.style.color = "#12ff00";
+    })
+
+    dislikebtn1.addEventListener('click' , ()=>{
+        input11.value = parseInt(input11.value) + 1;
+        input11.style.color = "#ff0000";
+    })
+</script>
+
+<script type="text/javascript">
+    
+    let likebtn2 = document.querySelector('#likebtn2');
+    let dislikebtn2 = document.querySelector('#dislikebtn2');
+    let input12 = document.querySelector('#input12');
+    let input22 = document.querySelector('#input22');
+
+    likebtn2.addEventListener('click' , ()=>{
+        input22.value = parseInt(input22.value) + 1;
+        input22.style.color = "#12ff00";
+    })
+
+    dislikebtn2.addEventListener('click' , ()=>{
+        input12.value = parseInt(input12.value) + 1;
+        input12.style.color = "#ff0000";
+    })
+</script>
+    <script type="text/javascript">
+    
+    let likebtn3 = document.querySelector('#likebtn3');
+    let dislikebtn3 = document.querySelector('#dislikebtn3');
+    let input13 = document.querySelector('#input13');
+    let input23 = document.querySelector('#input23');
+
+    likebtn3.addEventListener('click' , ()=>{
+        input23.value = parseInt(input23.value) + 1;
+        input23.style.color = "#12ff00";
+    })
+
+    dislikebtn3.addEventListener('click' , ()=>{
+        input1.value = parseInt(input13.value) + 1;
+        input1.style.color = "#ff0000";
+    })
+
+
+</script>
+
+<script type="text/javascript">
+    
+    let likebtn4 = document.querySelector('#likebtn4');
+    let dislikebtn4 = document.querySelector('#dislikebtn4');
+    let input14 = document.querySelector('#input14');
+    let input24 = document.querySelector('#input24');
+
+    likebtn4.addEventListener('click' , ()=>{
+        input24.value = parseInt(input24.value) + 1;
+        input24.style.color = "#12ff00";
+    })
+
+    dislikebtn4.addEventListener('click' , ()=>{
+        input14.value = parseInt(input14.value) + 1;
+        input14.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn5 = document.querySelector('#likebtn5');
+    let dislikebtn5 = document.querySelector('#dislikebtn5');
+    let input15 = document.querySelector('#input15');
+    let input25 = document.querySelector('#input25');
+
+    likebtn5.addEventListener('click' , ()=>{
+        input25.value = parseInt(input25.value) + 1;
+        input25.style.color = "#12ff00";
+    })
+
+    dislikebtn5.addEventListener('click' , ()=>{
+        input15.value = parseInt(input15.value) + 1;
+        input15.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn6 = document.querySelector('#likebtn6');
+    let dislikebtn6 = document.querySelector('#dislikebtn6');
+    let input16 = document.querySelector('#input16');
+    let input26 = document.querySelector('#input26');
+
+    likebtn6.addEventListener('click' , ()=>{
+        input26.value = parseInt(input26.value) + 1;
+        input26.style.color = "#12ff00";
+    })
+
+    dislikebtn6.addEventListener('click' , ()=>{
+        input16.value = parseInt(input16.value) + 1;
+        input16.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn7 = document.querySelector('#likebtn7');
+    let dislikebtn7 = document.querySelector('#dislikebtn7');
+    let input17 = document.querySelector('#input17');
+    let input27 = document.querySelector('#input27');
+
+    likebtn7.addEventListener('click' , ()=>{
+        input27.value = parseInt(input27.value) + 1;
+        input27.style.color = "#12ff00";
+    })
+
+    dislikebtn7.addEventListener('click' , ()=>{
+        input17.value = parseInt(input17.value) + 1;
+        input17.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn8 = document.querySelector('#likebtn8');
+    let dislikebtn8 = document.querySelector('#dislikebtn8');
+    let input18 = document.querySelector('#input18');
+    let input28 = document.querySelector('#input28');
+
+    likebtn8.addEventListener('click' , ()=>{
+        input28.value = parseInt(input28.value) + 1;
+        input28.style.color = "#12ff00";
+    })
+
+    dislikebtn8.addEventListener('click' , ()=>{
+        input18.value = parseInt(input18.value) + 1;
+        input18.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn9 = document.querySelector('#likebtn9');
+    let dislikebtn9 = document.querySelector('#dislikebtn9');
+    let input19 = document.querySelector('#input19');
+    let input29 = document.querySelector('#input29');
+
+    likebtn9.addEventListener('click' , ()=>{
+        input29.value = parseInt(input29.value) + 1;
+        input29.style.color = "#12ff00";
+    })
+
+    dislikebtn9.addEventListener('click' , ()=>{
+        input19.value = parseInt(input19.value) + 1;
+        input19.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn10 = document.querySelector('#likebtn10');
+    let dislikebtn10 = document.querySelector('#dislikebtn10');
+    let input110 = document.querySelector('#input110');
+    let input210 = document.querySelector('#input210');
+
+    likebtn10.addEventListener('click' , ()=>{
+        input210.value = parseInt(input210.value) + 1;
+        input210.style.color = "#12ff00";
+    })
+
+    dislikebtn10.addEventListener('click' , ()=>{
+        input110.value = parseInt(input110.value) + 1;
+        input110.style.color = "#ff0000";
+    })
+
+
+</script>
+
+
+<script type="text/javascript">
+    
+    let likebtn11 = document.querySelector('#likebtn11');
+    let dislikebtn11 = document.querySelector('#dislikebtn11');
+    let input111 = document.querySelector('#input111');
+    let input211 = document.querySelector('#input211');
+
+    likebtn11.addEventListener('click' , ()=>{
+        input211.value = parseInt(input211.value) + 1;
+        input211.style.color = "#12ff00";
+    })
+
+    dislikebtn11.addEventListener('click' , ()=>{
+        input111.value = parseInt(input111.value) + 1;
+        input111.style.color = "#ff0000";
+    })
+</script>
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-kontakt </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+
+<!-- ovoj del e so jQuery, ja boi pozadinata na polinjata za vnes -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "pink");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "beige");
+  });
+});
+</script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <div class="heading" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                        
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+    <section class="contact">
+        <div class="content">
+            <h2>Контакт инфо</h2>
+            <p>За повеќе информации, обратете ни се на нашиот телефонски број или меил адреса</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Адреса</h3>
+                        <p>ул.„Алберт Ајнштајн“,<br>8-1/9,<br>Скопје</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Телефонски број</h3>
+                        <p>071-257-681</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-camera" aria-hidden="true"></i></i></div>
+                    <div class="text">
+                        <a href="https://www.instagram.com/" ><h3>Инстаграм</h3></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></i></div>
+                    <div class="text">
+                        <a href="https://www.facebook.com/" ><h3>Фејсбук</h3> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Испрати Меил</h2>
+                    <div class="inputBox">
+                        <label>
+                        <input type="text" required="required">
+                        <span>Име и Презиме</span></label>
+                    </div>
+                    <div class="inputBox">
+                        <label>
+                        <input type="text" required="required">
+                        <span>Меил адреса</span></label>
+                    </div>
+                    <div class="inputBox">
+                        <label>
+                        <input type="text" required="required">
+                        <span>Вашата порака...</span></label>
+                    </div>
+                    <button class="isprati" type="submit" value="submit" >
+                        Испрати
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    
+</body>
+
+
+</html>

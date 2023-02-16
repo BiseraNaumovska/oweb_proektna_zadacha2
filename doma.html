@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-doma </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- ovoj del e so jQuery, tekstot za mene go slajdnuva-->
+
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 15px;
+  text-align: center;
+  background-color: #c09d85;
+  border: solid 1px #000000;
+}
+
+#panel {
+  padding: 35px;
+  display: none;
+}
+</style>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <div class="heading" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                        
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+    <br>
+    <br>
+    <hr size="5px" noshade color="#355E3B"> <!-- ova e zelena boja -->
+    <p class="zdravo"> Добредојдовте! </p> 
+    
+    <!-- tuka ke ima slika i text, t.e. zapoznavanje -->
+    <div class="box">
+        <div class="imgBx">
+            <img src="bibi.jpg" alt="Bisera Naumovska">
+        </div>
+
+        <div class="content">
+            <h1 id="flip" >Бисера Наумовска <h6>(стисни за да прочиташ повеќе)</h6></h1>
+            <p id="panel"> e студент во трета година на Факултетот за Електротехника и Информациски Технологии 
+                при УКИМ во Скопје , насока Компјутерски Технологии и Инженерство. 
+                Таа е амбициозна и креативна личност со огромна мотивација и желба за 
+                креативна работа, способна за индивидуална и тимска работа.
+                Бисера е активна на повеќе полиња од областа на уметноста. Таа покрај тоа што е редовен студент на својот факултет, паралелно
+                работи и на проекти, поточно на дизајн и илустрации на книги наменети за деца и држи приватни часови по математика на деца
+                од основно и средно образование. До сега, има соработувано со Министерство за култура, Природонаучен музеј на град Скопје и со  
+                центарот за културно наследство Хаемус за изработка на дизајни за репроматеријали. Бисера, минатата 2021 година, работеше како реонски инструктор ангажиран за 
+                Пописот на население, домаќинства и станови – 2021. Од оваа година, таа се занимава со манекенство, и притоа има учествувано на бројни
+                модни ревии во државата за македонски и странски дизајнери, како и на повеќе фотосесии за македонски брендови.
+                Таа е вљубеник во добрата забава со своите пријатели, вљубеник во уметноста, како и добрите дестинации. Покрај секојдневните обврски, таа
+                ужива своето слободно време да го поминува со своето милениче, но и во кујна, припремајќи слатки задоволства.
+              </p>
+        </div>
+
+    </div>
+
+
+
+    <img class="listovi" src="listovi.png" alt="listovi" >
+
+
+
+</body>
+
+
+</html>

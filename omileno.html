@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-omileno </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body id="omileno">
+    <div class="heading" style="background-color:rgb(125, 17, 46)" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu" style="background-color:rgb(125, 17, 46)">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu" style="background-color:rgb(125, 17, 46)">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                        
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+    
+    <!--  sledniot del e za boxes za sekciite  -->
+    <section class="container" >
+        <div class="card">
+            <div class="card-image car-1"></div>
+                <h2> Мода </h2>
+                <p>Мода е општ термин за популарен стил, 
+                    особено за облека, обувки, модни додатоци, 
+                    шминка, или мебел. "Мода" се однесува на еден специфичен,
+                     но сепак,често вообичаено тренд во врска со тоа како изгледа и се 
+                     облекува еден човек, како и преовладувањето на стиловите во однесување.</p>
+                     <a href="moda.html">ПОВЕЌЕ</a>
+                    </div>
+
+        <div class="card">
+            <div class="card-image car-2"></div>
+                <h2> Театар </h2>
+                <p>Театар— гранка што
+                     се занимава со изведба на приказни во театар пред публика
+                      комбинирајќи инструменти како говор, гест, музика, звук и
+                       спектакл. Во продолжение на 
+                    стандардниот наративен дијалог, театарот завзима такви
+                     форми како опера, балет, пантомима, кабуки, класични индиски 
+                     танци и кинеска опера.</p>
+
+                     <a href="teatar.html">ПОВЕЌЕ</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image car-3"></div>
+                <h2> Рецепти </h2>
+                <p>Готвење — чин на преобразба на прехранбени состојки во јадење.
+                    Готвењето опфаќа широк обем на методи на топлинска, хемиска и физичка преработка, 
+                    примена на разновидни алатки и технологии, и креативна употреба на посебни комбинации 
+                    на прехранбени состојки, со цел да се 
+                    подобри вкусот, изгледот или варливоста на јадењето.</p>
+                    <a href="recepti.html">ПОВЕЌЕ</a>
+                </div>
+
+        <div class="card">
+            <div class="card-image car-4"></div>
+                <h2> Никола Тесла </h2>
+                <p>Никола Тесла (Смиљан, Лика, 10 јули 1856 - Њујорк, 7 јануари 1943) — 
+                    српски научник, истражувач и пронаоѓач на полето на електротехниката 
+                    и радиотехниката, познат е како татко на наизменичната струја 
+                    и бројни футуристички пронајдоци.</p>
+                    <a href="nikolatesla.html">ПОВЕЌЕ</a>
+        </div>
+
+        
+
+    
+    </section>
+
+
+
+
+</body>
+
+
+</html>

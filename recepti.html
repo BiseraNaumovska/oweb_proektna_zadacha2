@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Bisera Naumovska - BATAK-recepti </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="strana1.css">
+
+
+    <!-- ova e jQuery za prebaruvanje -->
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myDIV *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <div class="heading" > <!-- ovoj div mi e za headerot - naslov, logo i pagjachko meni --> 
+        <h1 class="logo" > БАТАК<sup><span>&reg;</span></sup> </h1> <!-- naslov -->
+        <ul> <!-- lista za menito -->
+            <li> <a href="doma.html">Дома</a></li>
+            <li> <a href="omileno.html">Омилено<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="moda.html">Мода</a></li>
+                        <li><a href="teatar.html">Театар</a></li>
+                        <li><a href="recepti.html">Рецепти</a></li>
+                        <li><a href="nikolatesla.html">Никола Тесла</a></li>
+                    </ul>
+                </div>
+                </li>
+
+            <li> <a href="galerija.html">Галерија<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown_menu">
+                    <ul>
+                        <li><a href="milenichinja.html">Миленичиња</a></li>
+                        <li><a href="manekenstvo.html">Манекенство</a></li>
+                        <li><a href="prijateli.html">Пријатели</a></li>
+                        <li><a href="grafichkidizajn.html">Графички дизајн</a></li>
+                       
+                    </ul>
+                </div>
+                </li>
+            <li> <a href="blog.html">Блог</a></li>
+            <li> <a href="anketa.html">Анкета</a></li>
+            <li> <a href="kontakt.html">Контакт</a></li>
+        </ul>
+        
+<div ng-app="myApp" ng-controller="myCtrl"> 
+    <h1>{{theTime}}</h1>
+    </div>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $interval) {
+      $scope.theTime = new Date().toLocaleTimeString();
+      $interval(function () {
+          $scope.theTime = new Date().toLocaleTimeString();
+      }, 1000);
+    });
+    </script>
+    </div>
+
+
+    <p class="te" ><strong> Во овој дел можете да ги најдете моите омилени рецепти !</strong></p>
+    
+    <p>Пребарувај:</p>
+    <input id="myInput" type="text">
+    <br>
+    <br>
+   
+
+        <section id="myDIV">
+    <!--  sledniot del e za boxes za sekciite  -->
+    <section class="container"  >
+        <div class="card">
+            <div class="card-image car-a"></div>
+                <h2> Чоколадна торта со крем од фстак </h2>
+                <p></p>
+                     <a href="https://moirecepti.mk/post/%D1%87%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0-%D1%82%D0%BE%D1%80%D1%82%D0%B0-%D1%81%D0%BE-%D0%BA%D1%80%D0%B5%D0%BC-%D0%BE%D0%B4-%D1%84%D1%81%D1%82%D0%B0%D0%BA">ПОВЕЌЕ</a>
+                    </div>
+
+        <div class="card">
+            <div class="card-image car-b"></div>
+                <h2> Погача од триаголници, со фил од праз и сирење </h2>
+                <p></p>
+
+                     <a href="https://moirecepti.mk/post/%D0%BF%D0%BE%D0%B3%D0%B0%D1%87%D0%B0-%D0%BE%D0%B4-%D1%82%D1%80%D0%B8%D0%B0%D0%B3%D0%BE%D0%BB%D0%BD%D0%B8%D1%86%D0%B8-%D1%81%D0%BE-%D1%84%D0%B8%D0%BB-%D0%BE%D0%B4-%D0%BF%D1%80%D0%B0%D0%B7-%D0%B8">ПОВЕЌЕ</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image car-c"></div>
+                <h2> Њоки во сос од свежа буковка </h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D1%9A%D0%BE%D0%BA%D0%B8-%D0%B2%D0%BE-%D1%81%D0%BE%D1%81-%D0%BE%D0%B4-%D1%81%D0%B2%D0%B5%D0%B6%D0%B0-%D0%B1%D1%83%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0">ПОВЕЌЕ</a>
+                </div>
+
+        <div class="card">
+            <div class="card-image car-d"></div>
+                <h2> Француски колач со јаболка </h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D1%81%D0%BA%D0%B8-%D0%BA%D0%BE%D0%BB%D0%B0%D1%87-%D1%81%D0%BE-%D1%98%D0%B0%D0%B1%D0%BE%D0%BB%D0%BA%D0%B0-2">ПОВЕЌЕ</a>
+        </div>
+        
+
+    </section>
+
+    <section class="container" >
+        <div class="card">
+            <div class="card-image car-e"></div>
+                <h2> Кифлички </h2>
+                <p></p>
+                     <a href="https://moirecepti.mk/post/%D0%BB%D0%B5%D1%81%D0%BD%D0%B8-%D0%BC%D0%B5%D0%BA%D0%B8-%D0%BA%D0%B8%D1%84%D0%BB%D0%B8%D1%87%D0%BA%D0%B8">ПОВЕЌЕ</a>
+                    </div>
+
+        <div class="card">
+            <div class="card-image car-f"></div>
+                <h2> Лиснати кроасани</h2>
+                <p></p>
+
+                     <a href="https://moirecepti.mk/post/%D0%BB%D0%B8%D1%81%D0%BD%D0%B0%D1%82%D0%B8-%D0%BA%D1%80%D0%BE%D0%B0%D1%81%D0%B0%D0%BD%D0%B8-2">ПОВЕЌЕ</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image car-g"></div>
+                <h2> Здрав чипс со семиња</h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D0%B7%D0%B4%D1%80%D0%B0%D0%B2-%D1%87%D0%B8%D0%BF%D1%81-%D1%81%D0%BE-%D1%81%D0%B5%D0%BC%D0%B8%D1%9A%D0%B0">ПОВЕЌЕ</a>
+                </div>
+
+        <div class="card">
+            <div class="card-image car-h"></div>
+                <h2> Интегрални американски палачинки</h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D0%BB%D0%BD%D0%B8-%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8-%D0%BF%D0%B0%D0%BB%D0%B0%D1%87%D0%B8%D0%BD%D0%BA%D0%B8">ПОВЕЌЕ</a>
+        </div>
+        
+
+    </section>
+
+    <section class="container" >
+        <div class="card">
+            <div class="card-image car-i"></div>
+                <h2> Брз ручек со зеленчук и мелено месо </h2>
+                <p></p>
+                     <a href="https://moirecepti.mk/post/%D0%B1%D1%80%D0%B7-%D1%80%D1%83%D1%87%D0%B5%D0%BA-%D1%81%D0%BE-%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D1%87%D1%83%D0%BA-%D0%B8-%D0%BC%D0%B5%D0%BB%D0%B5%D0%BD%D0%BE-%D0%BC%D0%B5%D1%81%D0%BE">ПОВЕЌЕ</a>
+                    </div>
+
+        <div class="card">
+            <div class="card-image car-j"></div>
+                <h2> Штрудла со тиква и јаболка </h2>
+                <p></p>
+
+                     <a href="https://moirecepti.mk/post/%D1%88%D1%82%D1%80%D1%83%D0%B4%D0%BB%D0%B0-%D1%81%D0%BE-%D1%82%D0%B8%D0%BA%D0%B2%D0%B0-%D0%B8-%D1%98%D0%B0%D0%B1%D0%BE%D0%BB%D0%BA%D0%B0-2">ПОВЕЌЕ</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image car-k"></div>
+                <h2> Чоколадни мафини </h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D1%87%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%B4%D0%BD%D0%B8-%D0%BC%D0%B0%D1%84%D0%B8%D0%BD%D0%B8-7">ПОВЕЌЕ</a>
+                </div>
+
+        <div class="card">
+            <div class="card-image car-l"></div>
+                <h2> Брза Лисната Погача со праз </h2>
+                <p></p>
+                    <a href="https://moirecepti.mk/post/%D0%B1%D1%80%D0%B7%D0%B0-%D0%BB%D0%B8%D1%81%D0%BD%D0%B0%D1%82%D0%B0-%D0%BF%D0%BE%D0%B3%D0%B0%D1%87%D0%B0-%D1%81%D0%BE-%D0%BF%D1%80%D0%B0%D0%B7">ПОВЕЌЕ</a>
+        </div>
+        
+
+    </section>
+
+
+</section>
+    
+</body>
+
+
+</html>
